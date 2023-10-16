@@ -46,13 +46,8 @@ export class RegisterComponent implements OnInit {
     console.log(this.form.value);
     if (this.form.valid) {
       this.store.dispatch(
-        registerAction(this.form.value as RegisterRequestInterface)
+        registerAction({ request: this.form.value as RegisterRequestInterface })
       );
-      this.authService
-        .register(this.form.value as RegisterRequestInterface)
-        .subscribe((currentUser: CurrentUserInterface) => {
-          console.log('currentUser', currentUser);
-        });
     } else {
       console.log('All fields are required');
     }

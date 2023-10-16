@@ -4,6 +4,9 @@ import { registerAction } from './actions/register.action';
 
 const initialState: AuthStateInterface = {
   isSubmitting: false,
+  currentUser: null,
+  isLoggedIn: null,
+  validationErrors: null,
 };
 
 const authReducer = createReducer(

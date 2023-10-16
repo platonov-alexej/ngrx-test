@@ -18,6 +18,7 @@ import { EffectsModule } from '@ngrx/effects';
     AuthModule,
     HttpClientModule,
     StoreModule.forRoot({}),
+    EffectsModule.forRoot([]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
     EffectsModule.forRoot([]),
   ],
