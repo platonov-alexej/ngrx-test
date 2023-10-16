@@ -21,9 +21,9 @@ import { CurrentUserInterface } from 'src/app/shared/types/currentUser.interface
 })
 export class RegisterComponent implements OnInit {
   form = new FormGroup({
-    username: new FormControl('', [Validators.required]),
-    email: new FormControl('', [Validators.required]),
-    password: new FormControl('', [Validators.required]),
+    username: new FormControl(''),
+    email: new FormControl(''),
+    password: new FormControl(''),
   });
   isSubmitting$: Observable<boolean>;
 
